@@ -102,6 +102,11 @@ hr{
     height: 141px;
 }
 
+.courses{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+}
 .fa-star{
     font-size:12px;
 }
@@ -114,4 +119,61 @@ hr{
 
 .course-info{
     display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.course{
+    Width: 250px;
+    Height: 270px;
+    margin-bottom: 25px;
+
+}
+
+ .course-duration{
+    background: #FFE4E8;
+    border-radius: 15px;
+    Width:90px;
+    Height:25px;
+    padding-top:5px;
+    padding-left: 10px;
+    color: #FF4A60;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+/* --------------------------- Media Queries------------- */
+
+/* Mobile Device */
+@media only screen and (max-width: 688px) { 
+   
+    .container{
+        width: 100%;
+        margin-left: 15px;        
+    }
+    .blog-info{
+        width:300px;
+        margin-top:10px;
+    }
+    
+    .players, .blogs, .courses{
+        background-color: beige;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .courses{
+        grid-row-gap:25px;
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+}
+
+/* Tablet Device */
+
+@media only screen and (min-width: 768px) and (max-width:992px) {
+    .players{
+        background-color:aqua;
+    }
 }
